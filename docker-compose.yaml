@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  web:
+    image: iperf-server
+    ports:
+      - "5001:5001/udp"
+    networks:
+      - iperf-network
+    volumes:
+      - ./data/logs:/data
+    environment:
+      - ARGS=-u
+networks:
+        iperf-network:
