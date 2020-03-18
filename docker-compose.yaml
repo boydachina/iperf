@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   web:
-    image: iperf-server
+    image: boydachina/iperf
     ports:
       - "5001:5001/udp"
     networks:
